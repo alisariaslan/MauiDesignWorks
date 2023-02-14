@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
+             x:Class="POS_Profile.Views.Profile"
+             Title="Profile">
+
+	<Page.Behaviors>
+		<mct:StatusBarBehavior StatusBarColor="Black" StatusBarStyle="LightContent" />
+	</Page.Behaviors>
+	
+	<Grid>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height=".45*"/>
+				<RowDefinition Height=".55*"/>
+			</Grid.RowDefinitions>
+			<Image Grid.Row="0" Source="wallpaper.jpg" Aspect="AspectFill"/>
+		</Grid>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height=".40*"/>
+				<RowDefinition Height=".60*"/>
+			</Grid.RowDefinitions>
+			<Grid Grid.Row="0" Padding="24,16,24,0">
+				<Grid.RowDefinitions>
+					<RowDefinition Height=".15*"/>
+					<RowDefinition Height=".4*"/>
+					<RowDefinition Height=".15*"/>
+					<RowDefinition Height=".3*"/>
+				</Grid.RowDefinitions>
+
+				<StackLayout Grid.Row="0" FlowDirection="RightToLeft" Orientation="Horizontal"  Padding="7" Spacing="10">
+					<Image Source="basket.png">
+						<Image.Shadow>
+							<Shadow Brush="Black" Offset="0,0" Radius="10"/>
+						</Image.Shadow>
+					</Image>
+					<Image Source="heart.png">
+						<Image.Shadow>
+							<Shadow Brush="Black" Offset="0,0" Radius="10"/>
+						</Image.Shadow>
+					</Image>
+				</StackLayout>
+
+				<Border Grid.Row="1" WidthRequest="100">
+					<Border.StrokeShape>
+						<RoundRectangle CornerRadius="100" />
+					</Border.StrokeShape>
+					<Border.Shadow>
+						<Shadow Brush="Black" Radius="50"/>
+					</Border.Shadow>
+					<Image Aspect="AspectFill" Source="lola.png"/>
+				</Border>
+				<Label Grid.Row="2" HorizontalOptions="Center" VerticalOptions="End" FontSize="Large" FontAttributes="Bold" TextColor="White"
+					   Text="Lola Xendeolon">
+					<Label.Shadow>
+						<Shadow Brush="Black"/>
+					</Label.Shadow>
+				</Label>
+				<Label Grid.Row="3" HorizontalTextAlignment="Center" VerticalOptions="Center" FontSize="Small" FontAttributes="None" TextColor="White"
+					   Text="Work hard in silence.&#x0a; Let your success be the noise.">
+					<Label.Shadow>
+						<Shadow Brush="Black"/>
+					</Label.Shadow>
+				</Label>
+			</Grid>
+
+
+			<VerticalStackLayout Grid.Row="1" Padding="24,0,24,0" Spacing="0">
+				<Grid>
+					<BoxView Color="White" CornerRadius="8,8,0,0" HeightRequest="60">
+						<BoxView.Shadow>
+							<Shadow Brush="Black" Offset="0,0" Radius="20" Opacity="0.20" />
+						</BoxView.Shadow>
+					</BoxView>
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="75"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="75"/>
+						</Grid.ColumnDefinitions>
+						<Image Grid.Column="0" Source="adr.png" HeightRequest="30" Opacity=".5"/>
+						<Label Grid.Column="1" Text="My Address" FontSize="Small" FontAttributes="Bold" Opacity=".9" VerticalOptions="Center"/>
+						<Image Grid.Column="2" Source="right.png" HeightRequest="20" Opacity=".3"/>
+					</Grid>
+				</Grid>
+
+				<Grid>
+					<BoxView Color="White" CornerRadius="0,0,8,8" HeightRequest="60">
+						<BoxView.Shadow>
+							<Shadow Brush="Black" Offset="0,0" Radius="20" Opacity="0.20" />
+						</BoxView.Shadow>
+					</BoxView>
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="75"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="75"/>
+						</Grid.ColumnDefinitions>
+						<Image Grid.Column="0" Source="account.png" HeightRequest="30" Opacity=".5"/>
+						<Label Grid.Column="1" Text="Account" FontSize="Small" FontAttributes="Bold" Opacity=".9" VerticalOptions="Center"/>
+						<Image Grid.Column="2" Source="right.png" HeightRequest="20" Opacity=".3"/>
+					</Grid>
+				</Grid>
+
+
+				<Grid Margin="0,24,0,0">
+					<BoxView Color="White" CornerRadius="8,8,0,0" HeightRequest="60" >
+						<BoxView.Shadow>
+							<Shadow Brush="Black" Offset="0,0" Radius="20" Opacity="0.20" />
+						</BoxView.Shadow>
+					</BoxView>
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="75"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="75"/>
+						</Grid.ColumnDefinitions>
+						<Image Grid.Column="0" Source="notif.png" HeightRequest="30" Opacity=".5"/>
+						<Label Grid.Column="1" Text="Notifications" FontSize="Small" FontAttributes="Bold" Opacity=".9" VerticalOptions="Center"/>
+						<Image Grid.Column="2" Source="right.png" HeightRequest="20" Opacity=".3"/>
+					</Grid>
+				</Grid>
+
+				<Grid>
+					<BoxView Color="White" CornerRadius="0" HeightRequest="60">
+						<BoxView.Shadow>
+							<Shadow Brush="Black" Offset="0,0" Radius="20" Opacity="0.20" />
+						</BoxView.Shadow>
+					</BoxView>
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="75"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="75"/>
+						</Grid.ColumnDefinitions>
+						<Image Grid.Column="0" Source="device.png" HeightRequest="30" Opacity=".5"/>
+						<Label Grid.Column="1" Text="Devices" FontSize="Small" FontAttributes="Bold" Opacity=".9" VerticalOptions="Center"/>
+						<Image Grid.Column="2" Source="right.png" HeightRequest="20" Opacity=".3"/>
+					</Grid>
+				</Grid>
+				<Grid>
+					<BoxView Color="White" CornerRadius="0" HeightRequest="60">
+						<BoxView.Shadow>
+							<Shadow Brush="Black" Offset="0,0" Radius="20" Opacity="0.20" />
+						</BoxView.Shadow>
+					</BoxView>
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="75"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="75"/>
+						</Grid.ColumnDefinitions>
+						<Image Grid.Column="0" Source="key.png" HeightRequest="25" Opacity=".5"/>
+						<Label Grid.Column="1" Text="Passwords" FontSize="Small" FontAttributes="Bold" Opacity=".9" VerticalOptions="Center"/>
+						<Image Grid.Column="2" Source="right.png" HeightRequest="20" Opacity=".3"/>
+					</Grid>
+				</Grid>
+				<Grid>
+					<BoxView Color="White" CornerRadius="0,0,8,8" HeightRequest="60">
+						<BoxView.Shadow>
+							<Shadow Brush="Black" Offset="0,0" Radius="20" Opacity="0.20" />
+						</BoxView.Shadow>
+					</BoxView>
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="75"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="75"/>
+						</Grid.ColumnDefinitions>
+						<Image Grid.Column="0" Source="lang.png" HeightRequest="25" Opacity=".5"/>
+						<Label Grid.Column="1" Text="Language" FontSize="Small" FontAttributes="Bold" Opacity=".9" VerticalOptions="Center"/>
+						<Image Grid.Column="2" Source="right.png" HeightRequest="20" Opacity=".3"/>
+					</Grid>
+				</Grid>
+			</VerticalStackLayout>
+			
+				
+			
+		</Grid>
+	</Grid>
+</ContentPage>
